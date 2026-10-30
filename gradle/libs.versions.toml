@@ -1,0 +1,18 @@
+# Single source of truth for the Fabric 1.16.5 / Java 26 development stack.
+# Bump a version here, then rebuild; every mod that copies this template inherits it.
+[versions]
+minecraft = "1.16.5"
+yarn = "1.16.5+build.10"
+loader = "0.20.1"
+fabric-api = "0.42.0+1.16"
+loom = "1.19.3"
+java = "26"
+
+[libraries]
+minecraft = { module = "com.mojang:minecraft", version.ref = "minecraft" }
+yarn = { module = "net.fabricmc:yarn", version.ref = "yarn" }
+fabric-loader = { module = "net.fabricmc:fabric-loader", version.ref = "loader" }
+fabric-api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric-api" }
+
+[plugins]
+fabric-loom = { id = "fabric-loom", version.ref = "loom" }

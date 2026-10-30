@@ -12,6 +12,17 @@ Continuity is a Fabric mod built around modern APIs to allow for the most effici
 
 Continuity depends on the Fabric API and is client-side only. With the mod come two built-in resource packs - one provides default connected textures, similar to Optifine, and the other provides a fix for glass pane culling.
 
+## Development
+
+This fork targets Minecraft 1.16.5 with a Java 26-only toolchain. The Gradle wrapper pins Gradle 9.8.2 and provisions Temurin 26 automatically, so a system Java installation is not required.
+
+```sh
+./gradlew build
+./gradlew runClient
+```
+
+The first build downloads Gradle, Loom, Minecraft, mappings, Fabric API, and assets; later builds can use the Gradle cache.
+
 ## CTM
 
 Nowadays, there are two main CTM (Connected Texture Mapping) formats:
